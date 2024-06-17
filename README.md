@@ -1,65 +1,77 @@
 # CLGSDN
 
 ## Introduction
-<Introduction>
-	
+Introduction
+
+
+<span id='Data preparation'/>
+
 ## 1. Data preparation:
-The traffic data files are available at [Google Drive](https://drive.google.com/file/d/1rHJYc8cgNFPPvWLRpwynGj2xohqcc2R7/view?usp=sharing) (For Google Drive) or [One Drive](https://1drv.ms/u/c/023ed7fa29970c01/EZIqCXyHPf9Lg3ggSn0TrwYBx4wGLVqJ6zU8dgzh6O_qAg?e=5uNa4K) (For Microsoft One Drive), and should be put into the main/ folder. 
+The traffic data files (TP_Stroe/raw_files/) are available at [Google Drive](https://drive.google.com/file/d/1rHJYc8cgNFPPvWLRpwynGj2xohqcc2R7/view?usp=sharing) (For Google Drive) or [One Drive](https://1drv.ms/u/c/023ed7fa29970c01/EZIqCXyHPf9Lg3ggSn0TrwYBx4wGLVqJ6zU8dgzh6O_qAg?e=5uNa4K) (For Microsoft One Drive), and should be put into the main/ folder. 
 ### The folders should be:
-├─TP_Store
-│    ├─Raw	
+```
+├─TP_Store  
+│    	├─raw_files
+│		├─metr_la
+│		├─pems_bay
+│		├─pems04
+│		├─pems08
 ├─configs
-│
 ├─model
-│
-
-
 ├─utils
-
 ├─engine.py
 ├─exp.py
 ├─Readme.pdf
 ├─Readme.md
 ├─requirement.txt
+```
 
-
+---------
+<span id='Environment'/>
 ## 2. Create a conda environment for CLGSDN：
-1.1	 Create an environment.
+### 1.1 Create an environment.
+```
+# Create an environment.
+    conda create -n CLGSDN_envs python=3.11
+```
+* Notes: You can specify another version of Python，but Python>=3.9.
 
-   
-Create an environment.
- conda create -n CLGSDN_envs python=3.11
-     Proceed ([y]/n)? y
-Notes：
-You can specify another version of Python，but Python>=3.9.
-1.2	 Activate the environment.
-Activate the encironment.
- conda activate CLGSDN_envs
-1.3	 Install required package.
-	Pytorch.
+### 1.2 Activate the environment.
+```
+# Activate the encironment.
+conda activate CLGSDN_envs
+```
+
+###1.3 Install required package.
+* Pytorch.
 Open the Link: https://pytorch.org/get-started/locally/, find your device, and install Pytorch.
 
-	Other packages.
-Install packages. 
- Pip install -r requirement.txt
-
-	A special Package.
+* Other packages.
+```
+# Install packages. 
+pip install -r requirement.txt
+```
+* A special Package.
 Pytables cannot be installed via command “pip install”， please use “conda install”.
-Install packages. 
- Pip install pytables
-     Proceed ([y]/n)? y
-1.4	 Test your environment.
-A Tesing on environment.
- Python exp.py
+```
+# Install packages.
+pip install pytables
+```
+### 1.4 Test your environment.
+```
+# A Tesing on environment.
+python exp.py
+```
 The following content indicates that the program ran successfully.
  
 
-3.	Conduct the Experiment
-3.1	 Specify parameters (model, dataset, etc.).
+## 3. Conduct the Experiment
+### 3.1 Specify parameters (model, dataset, etc.).
 You can experiment with the following command.
-Run the code.
- python exp.py --<argument1> <parameter1> --<argument2> <parameter2>…
-	
+```
+#Run the code.
+python exp.py --<argument1> <parameter1> --<argument2> <parameter2>…
+```
 For example：
 Run the code.
  python exp.py --model_name dcrnn --dataset metr_la --graphgen_name CLGSDN
