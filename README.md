@@ -29,20 +29,20 @@ The traffic data files (TP_Stroe/raw_files/) are available at [Google Drive](htt
 ---------
 <span id='Environment'/>
 ## 2. Create a conda environment for CLGSDN：
-### 1.1 Create an environment.
+### 2.1 Create an environment.
 ```
 # Create an environment.
     conda create -n CLGSDN_envs python=3.11
 ```
 * Notes: You can specify another version of Python，but Python>=3.9.
 
-### 1.2 Activate the environment.
+### 2.2 Activate the environment.
 ```
 # Activate the encironment.
 conda activate CLGSDN_envs
 ```
 
-###1.3 Install required package.
+### 2.3 Install required package.
 * Pytorch.
 Open the Link: https://pytorch.org/get-started/locally/, find your device, and install Pytorch.
 
@@ -57,7 +57,7 @@ Pytables cannot be installed via command “pip install”， please use “cond
 # Install packages.
 pip install pytables
 ```
-### 1.4 Test your environment.
+### 2.4 Test your environment.
 ```
 # A Tesing on environment.
 python exp.py
@@ -101,7 +101,7 @@ When the selected dataset is Metr-la or Pems-bay, the parameter <--choise_channe
 	--graphgen_name None
 This command means that only the <graph provided by the dataset> is used. If the dataset does not provide any graph, it is the <identity matrix>.
 
-4.	Details.
+## 4.	Details.
 - Final Report
 After the program ends, the following result will be output.
  
@@ -135,7 +135,7 @@ Using the command <--graphgen_name CLGSDN>. For example:
 DCRNN.
  python -exp.py --model_name dcrnn --graphgen_name CLGSDN --dataset metr_la --dataset_prob [0.7,0.1,0.2] --epochs 100 
 	
-5. citation
+## 5. citation
 ```
 @ARTICLE{10757324,
   author={Peng, Peng and Chen, Xuewen and Zhang, Xudong and Tang, Haina and Shen, Hanji and Li, Jun},
