@@ -1,11 +1,6 @@
 # CLGSDN
 
-## Introduction
-Introduction
-
-
 <span id='Data preparation'/>
-
 ## 1. Data preparation:
 The traffic data files (TP_Stroe/raw_files/) are available at [Google Drive](https://drive.google.com/file/d/1rHJYc8cgNFPPvWLRpwynGj2xohqcc2R7/view?usp=sharing) (For Google Drive) or [One Drive](https://1drv.ms/u/c/023ed7fa29970c01/EZIqCXyHPf9Lg3ggSn0TrwYBx4wGLVqJ6zU8dgzh6O_qAg?e=5uNa4K) (For Microsoft One Drive), and should be put into the main/ folder. 
 ### The folders should be:
