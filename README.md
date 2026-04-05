@@ -3,7 +3,7 @@
 This repository is the official PyTorch implementation of the IEEE Internet of Things Journal (JIOT) paper titled "**CLGSDN: Contrastive-Learning-Based Graph Structure Denoising Network for Traffic Prediction**".
 
 <p align="center">
-  <b><a href="./README.md">English</a></b> | <a href="./README_CN.md">中文说明</a>
+  <b>English</b> | <a href="./README_CN.md">中文说明</a>
 </p>
 
 ---
