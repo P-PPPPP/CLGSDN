@@ -73,7 +73,7 @@ Please ensure your working directory is structured as follows:
 └─exp.py
 ```
 
-* **Data Download**: [Google Drive](https://drive.google.com/file/1gt4f9-NlcH6IKBzsDsTSUaaPrUONIgqV/view?usp=sharing). After downloading, extract it into the `datasets/raw_dataset` directory.
+* **Data Download**: [Google Drive](https://drive.google.com/file/d/1gt4f9-NlcH6IKBzsDsTSUaaPrUONIgqV/view?usp=sharing). After downloading, extract it into the `datasets/raw_dataset` directory.
 
 ---
 
