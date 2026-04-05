@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser()
 '''
 parser.add_argument('--root_store', type=str, default='./datasets/', help='Root directory for data reading/writing, default is current directory')
 parser.add_argument('--engine_config', type=str, default='./configs/engine.yaml', help='')
+parser.add_argument('--notes', type=str, default='', help='Experimental note')
 
 '''Select model name, the unified interface for all models is in utils/ModelProvider.py'''
 parser.add_argument('--model', type=str, default='gw',

@@ -1,0 +1,68 @@
+/home/pengpeng/project/CLGSDN/utils/ExpTools.py:1: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import os,torch,copy,pynvml
+select_channels:  [0]
+Regenerating dataset.
+	Done.
+Loading existence torch dataset.
+	choice channels ['speed']
+	train: 20540
+	vali : 6830
+	test : 6830
+
+Experiment Start at <2026-04-05_14-19-36>
+	PID: <3541806>
+	Notes: <test_note>
+
+Envs Setting:
+    period_type: "None";      select_channels: "[0]";  
+    dataset_type: "['train', 'vali', 'test']";      mode: "['train', 'vali', 'test']";  
+    inv_trans: "True";      loss: "l1";      dataset_prob: "[6, 2, 2]";      data_scale: "True";  
+    date_scale: "True";      c_out: "1";      regen_dataset: "True";  
+    check_dataloader: "False";      muti_process: "False";      seed: "42";      device: "cuda:0";  
+    dtype: "torch.float32";      adjust_lr: "False";      save_best_model: "False";  
+    load_best_model: "False";      inp_len: "12";      pred_len: "12";      epochs: "1";  
+    batch_size: "64";      optimizer: "adam";      learning_rate: "0.0001";  
+    weight_decay: "1e-05";      dropout: "0.3";      c_in: "1";  
+Model Setting:
+    name: "gw";      Total_name: "Graph Wavenet";      using_adjs: "True";      dropout: "0.3";  
+    blocks: "4";      layers: "2";      addaptadj: "True";      in_dim: "2";      d_model: "32";  
+    residual_channels: "32";      dilation_channels: "32";      skip_channels: "256";  
+    end_channels: "512";      kernel_size: "2";      num_adjs: "2";      order: "1";  
+    device: "cuda:0";      num_nodes: "207";      out_dim: "12";  
+Dataset Setting:
+    name: "metr_la";      folder: "./datasets/raw_datas...";      file: "./datasets/raw_datas...";  
+    n_channels: "1";      n_nodes: "207";      lens: "34272";      time_window: "5mins";  
+    channel_info: "['speed']";      nodes_info: "[0, 1, 2, 3, 4, 5, 6...";  
+    adj_file: "./datasets/raw_datas...";      c_date: "5";  
+
+Epoch: 001
+State: <train>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    13.7747     13.7747     335.9657    27.54%      11.0459 s       11.05 s     
+	0100    7.9958      7.9958      202.6015    16.84%      0.0606 s        17.11 s     
+	0200    5.2340      5.2340      129.4350    11.58%      0.0622 s        23.33 s     
+	0300    5.2155      5.2155      133.1365    11.57%      0.0626 s        29.59 s     
+State: <vali>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    4.0997      4.0997      78.8868     10.34%      0.0208 s        0.02 s      
+	0100    4.7310      4.7310      117.1189    11.05%      0.0202 s        2.04 s      
+State: <test>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    5.5583      5.5583      126.8803    16.06%      0.0204 s        0.02 s      
+	0100    5.7129      5.7129      161.4141    14.51%      0.0202 s        2.04 s      
+Info Report: <Epoch 001> 
+	State   Avg. Loss   Avg. MAE    Avg. MSE    Avg. MAPE   Time Cost   
+	train   6.0763      6.0763      152.7654    13.21%      30.77 s     
+	vali    4.7250      4.7250      116.3951    11.07%      2.14 s      
+	test    5.7095      5.7095      159.0019    14.54%      2.14 s      
+<Step /12> 	3           6           12          
+	MAE  	4.2811      5.6918      7.6754      
+<Latest 5>	1           
+	MAE  	5.7095      
+
+<Final Report>
+	Idx     Avg. MAE    Avg. MSE    Avg. MAPE   Avg. RMSE   
+	1       5.70955     159.00189   14.545%     12.60960    
+	Notes: test_note
+	Training finished!
+

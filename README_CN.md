@@ -158,19 +158,17 @@ nohup python -u exp.py --model gw --dataset pems08 --GSL None --select_channels 
 
 -----
 
-## 📊 6. 实验细节与复现
+## 📊 6. 实验结果分析与解读
 
 ### 📝 结果解读
+* **Experimental logs**: 实验进行时或结束后，你可以在 `./datasets/results/logs/` 找到相应的实验日志。
+* **Final Report**: 程序结束后会在日志中输出验证集 Loss 最小那一轮的测试结果。
 
-  * **Final Report**: 程序结束后会输出验证集 Loss 最小那一轮的测试结果（./datasets/results/logs/）。
-  * **Detailed Logs**: 日志包含 12 个时间步（Step 1-12）的详细 MAE。例如：Step 3 (15 min), Step 6 (30 min), Step 12 (1 hour)。
+### 🛠️ 实验结果分析工具
 
-### 🔄 复现示例 (DCRNN + METR-LA)
-
-| 实验类型 | 完整命令 |
-| :--- | :--- |
-| **Baseline** | `python exp.py --model dcrnn --GSL None --dataset metr_la --dataset_prob [0.7,0.1,0.2] --epochs 100 --select_channels 0` |
-| **Ours** | `python exp.py --model dcrnn --GSL CLGSDN --dataset metr_la --dataset_prob [0.7,0.1,0.2] --epochs 100 --select_channels 0` |
+* 我们提供了实验结果分析工具 `./tools/analyse_tools.py`，该脚本可自动提取所有实验的结果，并生成一个 Excel 文件，方便您直观对比不同实验配置的性能。
+* 工具中包含一个 **Notes** 列，该列的内容来源于实验启动时通过 `--notes <your note>` 参数添加的文本备注。
+* 该 Excel 文件包含 12 个时间步（Step 1-12）的详细 MAE。例如：Step 3 (15 min), Step 6 (30 min), Step 12 (1 hour)。
 
 -----
 

@@ -158,19 +158,17 @@ nohup python -u exp.py --model gw --dataset pems08 --GSL None --select_channels 
 
 ---
 
-## 📊 6. Experimental Details and Reproduction
+## 📊 6. Experimental Results Analysis and Interpretation
 
 ### 📝 Result Interpretation
+* **Experimental logs**: During or after the experiment, you can find the corresponding experimental logs in `./datasets/results/logs/`.
+* **Final Report**: After the program finishes, the test results corresponding to the epoch with the minimum validation loss will be output in the log.
 
-* **Final Report**: After the program finishes, it outputs the test results corresponding to the epoch with the minimum validation loss (./datasets/results/logs).
-* **Detailed Logs**: Logs contain detailed MAE for 12 time steps (Step 1-12). For example: Step 3 (15 min), Step 6 (30 min), Step 12 (1 hour).
+### 🛠️ Experimental Result Analysis Tool
 
-### 🔄 Reproduction Example (DCRNN + METR-LA)
-
-| Experiment Type | Full Command |
-| :--- | :--- |
-| **Baseline** | `python exp.py --model dcrnn --GSL None --dataset metr_la --dataset_prob [0.7,0.1,0.2] --epochs 100 --select_channels 0` |
-| **Ours** | `python exp.py --model dcrnn --GSL CLGSDN --dataset metr_la --dataset_prob [0.7,0.1,0.2] --epochs 100 --select_channels 0` |
+* We provide an experimental result analysis tool `./tools/analyse_tools.py`, which automatically extracts results from all experiments and generates an Excel file, allowing you to visually compare the performance of different experimental configurations.
+* The tool includes a **Notes** column, the content of which comes from the text note added via the `--notes <your note>` argument when starting the experiment.
+* The generated Excel file contains detailed MAE for 12 time steps (Step 1-12). For example: Step 3 (15 min), Step 6 (30 min), Step 12 (1 hour).
 
 ---
 
