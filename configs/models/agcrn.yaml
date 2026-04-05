@@ -1,0 +1,10 @@
+name: agcrn
+dropout: 0.3
+rnn_units: 64
+embedding_dim: 10
+num_layers: 2
+cheb_order: 2
+input_dim: 1
+output_dim: 1
+num_adjs: 2
+using_adjs: True

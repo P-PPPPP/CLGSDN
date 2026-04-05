@@ -1,0 +1,9 @@
+pynvml
+scipy
+einops
+pyyaml
+h5py
+pandas
+openpyxl
+numpy=1.24.3
+tables # you might be need to use conda install for pytables.

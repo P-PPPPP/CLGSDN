@@ -1,0 +1,49 @@
+info:
+    exp_ID: ''
+    notes: ''
+    exp_start_time: ''
+    task_name: ''
+    save_log: True
+    print_info: True
+    iter_report: True
+    print_every: 100
+    model_summary: False
+    
+store:
+    root_store: './store/'
+    # path = root_store + xxx
+    raw_dataset: 'raw_dataset/'
+    dataloader: 'dataset/'
+    results: 'results/'
+    dataset_config: 'configs/datasets/'
+    model_config: 'configs/models/'
+    GSL_config: 'configs/GSL/'
+
+exp:
+    period_type: None
+    select_channels: [-1]
+    dataset_type: ['train','vali','test']
+    mode: ['train','vali','test']
+    inv_trans: True
+    loss: mask_mae
+    dataset_prob: [6,2,2]
+    data_scale: True
+    date_scale: True
+    c_out: -1
+    regen_dataset: False
+    check_dataloader: False
+    muti_process: False
+    seed: 42
+    device: cpu
+    dtype: torch.float
+    adjust_lr: False
+    save_best_model: False
+    load_best_model: False
+    inp_len: 96
+    pred_len: 96
+    epochs: 5
+    batch_size: 32
+    optimizer: adam
+    learning_rate: 1e-3
+    weight_decay: 1e-4
+    dropout: 0.3

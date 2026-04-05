@@ -1,0 +1,14 @@
+name: fogs
+in_dim: 1
+hidden_dims: [[64, 64, 64], [64, 64, 64], [64, 64, 64]]
+first_layer_embedding_size: 64
+out_layer_dim: 128
+activation: 'GLU'
+use_mask: True
+temporal_emb: True
+spatial_emb: True
+history: 12
+horizon: 12
+strides: 4
+construct_type: connectivity
+num_adjs: 4

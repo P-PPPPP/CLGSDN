@@ -1,0 +1,5 @@
+name: dlinear
+seq_len: 96
+pred_len: 96
+individual: False
+enc_in: 7

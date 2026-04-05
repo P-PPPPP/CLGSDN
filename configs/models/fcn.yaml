@@ -1,0 +1,9 @@
+name: fcn
+order: 2
+dilation: 1
+kernel_size: 3
+
+c_share_layers: 1
+c_emb_dim: 8
+time_emb: True
+dropout: 0.3

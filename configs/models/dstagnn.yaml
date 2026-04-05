@@ -1,0 +1,30 @@
+name: dstagnn
+
+num_of_vertices: 307
+period: 288
+points_per_hour: 12
+num_for_predict: 12
+len_input: 12
+dataset_name: PEMS04
+
+ctx: 0
+in_channels: 1
+nb_block: 4
+n_heads: 3
+K: 3
+d_k: 32
+d_v: 32
+d_model: 512
+nb_chev_filter: 32
+nb_time_filter: 32
+batch_size: 32
+graph: AG
+
+num_of_weeks: 0
+num_of_days: 0
+num_of_hours: 1
+start_epoch: 0
+epochs: 110
+learning_rate: 0.0001
+
+time_strides: 1

@@ -1,0 +1,7 @@
+name: stgcn
+dropout: 0.3
+blocks: 2
+spatial_channels: 16
+n_channels: 64
+n_adjs: 1
+using_adjs: True

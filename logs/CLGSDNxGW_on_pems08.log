@@ -1,0 +1,158 @@
+/home/pengpeng/project/CLGSDN/utils/ExpTools.py:1: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import os,torch,copy,pynvml
+select_channels:  [2]
+Regenerating dataset.
+	Done.
+Loading existence torch dataset.
+	choice channels ['speed']
+	train: 10690
+	vali : 3547
+	test : 3547
+
+Experiment Start at <2026-04-05_13-08-12>
+	PID: <3519552>
+	Notes: <None>
+
+Envs Setting:
+    period_type: "None";      select_channels: "[2]";  
+    dataset_type: "['train', 'vali', 'test']";      mode: "['train', 'vali', 'test']";  
+    inv_trans: "True";      loss: "l1";      dataset_prob: "[6, 2, 2]";      data_scale: "True";  
+    date_scale: "True";      c_out: "1";      regen_dataset: "True";  
+    check_dataloader: "False";      muti_process: "False";      seed: "42";      device: "cuda:6";  
+    dtype: "torch.float32";      adjust_lr: "False";      save_best_model: "False";  
+    load_best_model: "False";      inp_len: "12";      pred_len: "12";      epochs: "5";  
+    batch_size: "64";      optimizer: "adam";      learning_rate: "0.0001";  
+    weight_decay: "1e-05";      dropout: "0.3";      c_in: "1";  
+Model Setting:
+    name: "gw";      Total_name: "Graph Wavenet";      using_adjs: "True";      dropout: "0.3";  
+    blocks: "4";      layers: "2";      addaptadj: "True";      in_dim: "2";      d_model: "32";  
+    residual_channels: "32";      dilation_channels: "32";      skip_channels: "256";  
+    end_channels: "512";      kernel_size: "2";      num_adjs: "2";      order: "1";  
+    device: "cuda:6";      num_nodes: "170";      out_dim: "12";  
+Dataset Setting:
+    name: "pems08";      folder: "./datasets/raw_datas...";      file: "./datasets/raw_datas...";  
+    n_channels: "3";      n_nodes: "170";      lens: "17856";  
+    start_time: "2016-07-01 00:00:00";      time_window: "5mins";  
+    channel_info: "['flow', 'occ', 'speed']";      nodes_info: "[0, 1, 2, 3, 4, 5, 6...";  
+    adj_file: "./datasets/raw_datas...";      c_date: "5";  
+GraphGenerator Setting:
+    name: "CLGSDN";      memory_type: "LPM";      n_feat: "12";      n_GMB: "12";  
+    n_prob: "3";      sparity_rate: "0.02";      loss_rate: "2.5";      graph_noise: "0.225";  
+    gamma: "[-0.3, 1.4]";      n_channels: "4";      attn_hid_dim: "32";      local_obs: "True";  
+    global_obs: "True";      simi_type: "TDA";      dist_type: "dist";      feat_cl_loss: "True";  
+    prob_cl_loss: "True";      identity_topo: "False";      LPM_learnable: "True";  
+    data_channels: "1";      feat_filter: "True";      prob_filter: "True";  
+    filter_attn: "True";      seq_len: "12";      device: "cuda:6";      dropout: "0.3";  
+    batch_size: "64";      n_nodes: "170";      dim_date: "5";  
+
+Epoch: 001
+State: <train>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    3.9839      3.7214      34.6540     7.00%       9.4002 s        9.40 s      
+	0100    2.7394      2.4875      24.8392     5.36%       0.1344 s        22.84 s     
+State: <vali>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.7746      1.5111      12.0720     3.05%       0.0622 s        0.06 s      
+State: <test>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    3.0782      2.8146      30.4888     8.31%       0.0612 s        0.06 s      
+Info Report: <Epoch 001> 
+	State   Avg. Loss   Avg. MAE    Avg. MSE    Avg. MAPE   Time Cost   
+	train   2.3996      2.1523      19.7168     4.57%       31.79 s     
+	vali    1.8730      1.6095      13.4484     3.32%       3.37 s      
+	test    1.8698      1.6063      13.3155     3.44%       3.38 s      
+<Step /12> 	3           6           12          
+	MAE  	1.3026      1.6197      2.0588      
+<Latest 5>	1           
+	MAE  	1.6063      
+
+Epoch: 002
+State: <train>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.8230      1.5865      9.6996      2.89%       0.1363 s        0.14 s      
+	0100    1.8059      1.5739      11.4424     3.12%       0.1355 s        13.69 s     
+State: <vali>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.7141      1.4653      11.5483     2.82%       0.0624 s        0.06 s      
+State: <test>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    2.8832      2.6346      27.7276     6.87%       0.0614 s        0.06 s      
+Info Report: <Epoch 002> 
+	State   Avg. Loss   Avg. MAE    Avg. MSE    Avg. MAPE   Time Cost   
+	train   1.7896      1.5603      11.3832     3.09%       22.64 s     
+	vali    1.8038      1.5551      12.9466     3.10%       3.38 s      
+	test    1.7801      1.5313      12.6932     3.15%       3.37 s      
+<Step /12> 	3           6           12          
+	MAE  	1.2646      1.5831      2.0247      
+<Latest 5>	1           2           
+	MAE  	1.6063      1.5313      
+
+Epoch: 003
+State: <train>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.9137      1.6911      12.8658     3.43%       0.1354 s        0.14 s      
+	0100    1.7423      1.5232      11.0753     3.00%       0.1356 s        13.69 s     
+State: <vali>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.7820      1.5497      12.6983     3.11%       0.0615 s        0.06 s      
+State: <test>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    2.8105      2.5790      26.0970     7.10%       0.0607 s        0.06 s      
+Info Report: <Epoch 003> 
+	State   Avg. Loss   Avg. MAE    Avg. MSE    Avg. MAPE   Time Cost   
+	train   1.7303      1.5137      11.0154     2.99%       22.62 s     
+	vali    1.7633      1.5312      12.4743     3.10%       3.36 s      
+	test    1.7539      1.5218      12.3713     3.19%       3.36 s      
+<Step /12> 	3           6           12          
+	MAE  	1.2514      1.5687      2.0036      
+<Latest 5>	1           2           3           
+	MAE  	1.6063      1.5313      1.5218      
+
+Epoch: 004
+State: <train>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.6905      1.4802      11.0433     2.89%       0.1356 s        0.14 s      
+	0100    1.6998      1.4941      10.7754     2.96%       0.1352 s        13.66 s     
+State: <vali>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.5444      1.3336      9.5222      2.59%       0.0617 s        0.06 s      
+State: <test>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    2.7742      2.5650      26.1003     7.53%       0.0610 s        0.06 s      
+Info Report: <Epoch 004> 
+	State   Avg. Loss   Avg. MAE    Avg. MSE    Avg. MAPE   Time Cost   
+	train   1.6863      1.4840      10.6758     2.94%       22.59 s     
+	vali    1.7121      1.5015      12.1010     3.10%       3.36 s      
+	test    1.7043      1.4940      12.1661     3.21%       3.37 s      
+<Step /12> 	3           6           12          
+	MAE  	1.2404      1.5571      1.9800      
+<Latest 5>	1           2           3           4           
+	MAE  	1.6063      1.5313      1.5218      1.4940      
+
+Epoch: 005
+State: <train>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.5426      1.3502      9.0729      2.60%       0.1352 s        0.14 s      
+	0100    1.6332      1.4468      10.2754     2.88%       0.1353 s        13.66 s     
+State: <vali>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    1.6048      1.4178      11.7794     2.91%       0.0620 s        0.06 s      
+State: <test>
+	iter    Loss        MAE         MSE         MAPE        Speed (/iter)   Time Cost   
+	0000    2.8444      2.6593      27.3471     7.52%       0.0609 s        0.06 s      
+Info Report: <Epoch 005> 
+	State   Avg. Loss   Avg. MAE    Avg. MSE    Avg. MAPE   Time Cost   
+	train   1.6361      1.4538      10.3641     2.90%       22.59 s     
+	vali    1.6882      1.5016      12.0803     3.08%       3.36 s      
+	test    1.6743      1.4877      12.1565     3.16%       3.36 s      
+<Step /12> 	3           6           12          
+	MAE  	1.2329      1.5494      1.9636      
+<Latest 5>	1           2           3           4           5           
+	MAE  	1.6063      1.5313      1.5218      1.4940      1.4877      
+
+<Final Report>
+	Idx     Avg. MAE    Avg. MSE    Avg. MAPE   Avg. RMSE   
+	4       1.49400     12.16612    3.208%      3.48800     
+	Notes: None
+	Training finished!
+

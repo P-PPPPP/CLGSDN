@@ -1,0 +1,15 @@
+name: timesnet
+seq_len: 96
+label_len: 48
+pred_len: 96
+top_k: 5
+d_model: 512
+d_ff: 64
+num_kernels: 6
+task_name: 'long_term_forecast'
+e_layers: 2
+d_layers: 1
+enc_in: 7
+embed: 'timeF'
+freq: 'time'
+dropout: 0.1

@@ -1,0 +1,16 @@
+name: gw
+Total_name: Graph Wavenet
+using_adjs: True
+dropout: 0.3
+blocks: 4
+layers: 2
+addaptadj: True
+in_dim: 2
+d_model: 32
+residual_channels: 32
+dilation_channels: 32
+skip_channels: 256
+end_channels: 512
+kernel_size: 2
+num_adjs: 2
+order: 1

@@ -1,0 +1,7 @@
+name: lightts
+seq_len: 96
+pred_len: 192
+task_name: 'long_term_forecast'
+d_model: 512
+enc_in: 21
+dropout: 0.1

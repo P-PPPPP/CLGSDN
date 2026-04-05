@@ -1,0 +1,5 @@
+name: lstm
+seq_len: 96
+pred_len: 96
+n_layers: 1
+dropout: 0.1

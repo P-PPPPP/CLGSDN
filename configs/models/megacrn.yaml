@@ -1,0 +1,11 @@
+name: MegaCRN
+horizon: 12
+max_diffusion_step: 2
+num_rnn_layers: 1
+rnn_units: 64
+mem_num: 20
+mem_dim: 64
+
+use_curriculum_learning: False
+cl_decay_steps: 2000
+num_adjs: 3

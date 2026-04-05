@@ -1,0 +1,25 @@
+
+name: AUTOFORMER
+seq_len: 96
+label_len: 48
+pred_len: 96
+
+e_layers: 2
+d_layers: 1
+factor: 3
+
+enc_in: 7
+dec_in: 7
+c_out: 7
+freq: 'time'
+
+d_model: 512
+embed: 'timeF'
+
+dropout: 0.05
+moving_avg: 25
+output_attention: True
+
+n_heads: 8
+d_ff: 2048
+activation: 'gelu'
