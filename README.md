@@ -12,10 +12,11 @@ This repository is the official PyTorch implementation of the IEEE Internet of T
 1. [Model Architecture](#-1-model-architecture)
 2. [Motivation and Visualizations](#-2-motivation-and-visualizations)
 3. [Data Preparation](#-3-data-preparation)
-4. [Environment Setup](#-4-environment-setup)
-5. [Running Experiments](#-5-running-experiments)
-6. [Experimental Details and Reproduction](#-6-experimental-details-and-reproduction)
-7. [Citation](#-7-citation)
+4. [Related Projects](#-4-Related-Projects)
+5. [Environment Setup](#-5-Environment-Setup)
+6. [Running Experiments](#-6-running-experiments)
+7. [Experimental Results Analysis and Interpretation](#-7-Experimental-Results-Analysis-and-Interpretation)
+8. [Citation](#-8-citation)
 
 ---
 
@@ -77,9 +78,22 @@ Please ensure your working directory is structured as follows:
 
 ---
 
-## 🛠️ 4. Environment Setup
+## 🔗 4. Related Projects
 
-### 4.1 Create and Activate Environment
+To further enhance the usability and reproducibility of our work, we have open-sourced the following complementary projects:
+
+- **[Scientific-Data-Pipeline](https://github.com/P-PPPPP/Scientific-Data-Pipeline)**  
+  A full-process dataset repository. It provides integrated download and preprocessing methods for **all datasets used in this paper** (METR-LA, PEMS-BAY, PEMS04, PEMS08, etc.), offering a more streamlined and robust approach to data handling.
+
+- **[Scientific-Neural-Lab](https://github.com/P-PPPPP/Scientific-Neural-Lab)**  
+  *(Coming Soon)*  
+  This repository will provide a cleaner and more advanced multi-task training framework, addressing the logic clutter issues present in the current codebase. It is currently under active construction and will be open-sourced soon.
+
+---
+
+## 🛠️ 5. Environment Setup
+
+### 5.1 Create and Activate Environment
 
 ```bash
 # Create environment (Python 3.11 recommended)
@@ -88,14 +102,14 @@ conda create -n CLGSDN_envs python=3.11 -y
 conda activate CLGSDN_envs
 ```
 
-### 4.2 Install PyTorch (Core Step)
+### 5.2 Install PyTorch (Core Step)
 
 Due to differences in hardware (CPU/GPU) and CUDA versions, **please ensure you install the PyTorch version compatible with your own device environment**.
 
 1.  Visit the [PyTorch Official Local Installation Page](https://pytorch.org/get-started/locally/).
 2.  Generate and execute the installation command based on your OS, Package (Conda/Pip), and CUDA version.
 
-### 4.3 Install Other Dependencies
+### 5.3 Install Other Dependencies
 
 ```bash
 # Install basic dependencies
@@ -107,15 +121,15 @@ pip install -r requirements.txt
 
 ---
 
-## 🏃 5. Running Experiments
+## 🏃 6. Running Experiments
 
-### 5.1 Basic Command
+### 6.1 Basic Command
 
 ```bash
 python exp.py --model <model> --dataset <data> --GSL <generator> [other arguments]
 ```
 
-### 5.2 Argument Description
+### 6.2 Argument Description
 
 | Argument | Type | Key Options | Description |
 | :--- | :--- | :--- | :--- |
@@ -126,7 +140,7 @@ python exp.py --model <model> --dataset <data> --GSL <generator> [other argument
 | `--n_prob` | Int | `3` (default) | Parameter related to the probability graph. |
 | `--device` | Str | `cuda:0`, `cpu` | Specify the runtime device. |
 
-### 5.3 Quick Experiment Examples (Graph WaveNet)
+### 6.3 Quick Experiment Examples (Graph WaveNet)
 
 The following commands demonstrate comparative experiments with and without CLGSDN for Graph WaveNet (gw) on different datasets.
 
@@ -158,7 +172,7 @@ nohup python -u exp.py --model gw --dataset pems08 --GSL None --select_channels 
 
 ---
 
-## 📊 6. Experimental Results Analysis and Interpretation
+## 📊 7. Experimental Results Analysis and Interpretation
 
 ### 📝 Result Interpretation
 * **Experimental logs**: During or after the experiment, you can find the corresponding experimental logs in `./datasets/results/logs/`.
@@ -172,7 +186,7 @@ nohup python -u exp.py --model gw --dataset pems08 --GSL None --select_channels 
 
 ---
 
-## 📜 7. Citation
+## 📜 8. Citation
 
 If you find this work helpful for your research, please consider citing:
 
