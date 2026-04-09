@@ -54,5 +54,5 @@ class ddgcrn_api(nn.Module):
         N = x.size(2)
         x = x.transpose(1,3)
         x_mark = x_mark[:,:,1:3].unsqueeze(2).repeat(1,1,N,1)
-        x = torch.cat((x_mark, x),dim=-1)
+        x = torch.cat((x, x_mark),dim=-1)
         return x
